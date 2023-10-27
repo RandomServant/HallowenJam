@@ -148,6 +148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Head: {fileID: 3617544680396946413}
+  _maxDistance: 5
+  _pushForce: 1
 --- !u!1 &3617544680396946413
 GameObject:
   m_ObjectHideFlags: 0
