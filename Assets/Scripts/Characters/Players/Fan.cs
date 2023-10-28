@@ -24,7 +24,7 @@ public class Fan : Player
     {
         HeadRotate();
         
-        if(Input.GetKeyDown(KeyCode.Mouse0))
+        if(Input.GetKey(KeyCode.Mouse0))
             PushMove();
 
         if (Input.GetButtonDown("1"))
