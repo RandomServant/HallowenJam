@@ -23,8 +23,12 @@ public class Finish : MonoBehaviour
     {
         EnterFinish.Invoke(_showText);
         yield return new WaitForSeconds(_waitSecond);
-        
-        PlayerPrefs.SetInt("LevelsCompleted", SceneManager.GetActiveScene().buildIndex);
+
+        if (SceneManager.GetActiveScene().buildIndex > PlayerPrefs.GetInt("LevelsCompleted"))
+        {
+            PlayerPrefs.SetInt("LevelsCompleted", SceneManager.GetActiveScene().buildIndex);
+           
+        }
 
         if (_nextLevelName.Length > 0)
             SceneManager.LoadSceneAsync(_nextLevelName);
