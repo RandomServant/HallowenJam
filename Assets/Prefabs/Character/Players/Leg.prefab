@@ -131,9 +131,9 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &3617544679473749719
 MonoBehaviour:
@@ -149,7 +149,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Head: {fileID: 3617544680396946413}
   _maxDistanceInteraction: 5
-  _pushForce: 1
+  _pushForceforEveryLVL:
+  - 5
+  - 10
+  - 15
 --- !u!1 &3617544680396946413
 GameObject:
   m_ObjectHideFlags: 0
