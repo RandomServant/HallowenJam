@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class Fan : MonoBehaviour
+public class Fan : Player
 {
     public GameObject Head;
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class DuctTape : MonoBehaviour
+public class DuctTape : Player
 {
     public LineRenderer LineRenderer;
     public Rigidbody2D RopePoint;
