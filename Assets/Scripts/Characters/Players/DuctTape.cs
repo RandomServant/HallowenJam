@@ -18,7 +18,7 @@ public class DuctTape : Player
 
     private bool _isGlued = false;
     
-    void Start()
+    protected override void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _distanceJoint2D = GetComponent<DistanceJoint2D>();

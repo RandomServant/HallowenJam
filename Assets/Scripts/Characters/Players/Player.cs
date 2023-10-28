@@ -5,25 +5,25 @@ public class Player : MonoBehaviour
 {
     public GameObject UIPlayer;
     public GameObject WindowDeath;
-    GameObject UI;
-    GameObject UIDeath;
+    protected GameObject UI;
+    protected GameObject UIDeath;
 
-    void Start()
+    protected virtual void Start()
     {
-        UI = (GameObject)Instantiate(UIPlayer, transform.position, transform.rotation);
+        /*Instantiate(UIPlayer, transform.position, Quaternion.identity);*/
     }
 
     public void Death()
     {
         Destroy(UI);
-        UIDeath = (GameObject)Instantiate(WindowDeath, transform.position, transform.rotation);
+        /*UIDeath = Instantiate(WindowDeath, transform.position, Quaternion.identity);*/
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag.Equals("MovePlatform"))
         {
-            this.transform.parent = collision.transform;
+            transform.parent = collision.transform;
         }
     }
 
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("MovePlatform"))
         {
-            this.transform.parent = null;
+            transform.parent = null;
         }
     }
 }
