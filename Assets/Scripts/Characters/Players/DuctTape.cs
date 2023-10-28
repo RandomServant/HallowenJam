@@ -14,7 +14,8 @@ public class DuctTape : Player
         
     [Header("Settings")]
     [SerializeField] private float _maxDistanceInteraction = 15;
-    [SerializeField] private float _horizontalSpeed = 1;
+    [SerializeField] private float _horizontalSpeedAir = 1;
+    [SerializeField] private float _horizontalSpeedGround = 1;
     [SerializeField] private float _verticalSpeed = 1;
 
     [SerializeField] private Color _targetCanFire;
@@ -39,12 +40,12 @@ public class DuctTape : Player
             if(!_isGlued) Fire();
             else Drop();
         }
-
+        
+        MoveRight(Input.GetAxis("Horizontal"));
+        
         if (_isGlued)
-        {
-            MoveRight(Input.GetAxis("Horizontal"));
             MoveUp(Input.GetAxis("Vertical"));
-        }
+        
         else
         {
             Vector3 bindingPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -97,7 +98,9 @@ public class DuctTape : Player
 
     private void MoveRight(float direction)
     {
-        _rigidbody2D.AddForce(new Vector2(direction * _horizontalSpeed * Time.deltaTime, 0), ForceMode2D.Impulse);
+        float horizontalSpeed = _isGlued ? _horizontalSpeedAir : _horizontalSpeedGround;
+        
+        _rigidbody2D.AddForce(new Vector2(direction * horizontalSpeed * Time.deltaTime, 0), ForceMode2D.Impulse);
     }
     
     private void MoveUp(float direction)

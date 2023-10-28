@@ -142,7 +142,8 @@ MonoBehaviour:
   LineRenderer: {fileID: 0}
   RopePoint: {fileID: 0}
   _maxDistanceInteraction: 5
-  _horizontalSpeed: 1
+  _horizontalSpeedAir: 1
+  _horizontalSpeedGround: 3
   _verticalSpeed: 1
   _targetCanFire: {r: 1, g: 0, b: 0, a: 1}
 --- !u!232 &663322576814449052
