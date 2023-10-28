@@ -11,7 +11,7 @@ public class Projectile : MonoBehaviour
 
         if (player)
         {
-            // Урон - Смерть
+            player.Death();
         }
         
         Destroy(gameObject);
