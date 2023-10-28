@@ -28,7 +28,7 @@ public class Steam : MonoBehaviour
             ParticleSystem.Particle p = enter[i];
             p.startColor = new Color32(0, 0, 0, 0);
             enter[i] = p;
-            // Нанесение урона 
+            _player.Death();
         }
 
         _particleSystem.SetTriggerParticles(ParticleSystemTriggerEventType.Enter, enter);
