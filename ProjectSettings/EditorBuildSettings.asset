@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Level2.unity
     guid: a11967b193a551a408675009dadc4031
+  - enabled: 1
+    path: Assets/Levels/WindowDeath.unity
+    guid: fad6c6ef3dbf2f34b988ea42ddd784b6
   m_configObjects: {}
