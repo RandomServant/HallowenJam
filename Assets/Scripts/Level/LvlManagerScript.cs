@@ -38,4 +38,19 @@ public class LvlManagerScript : MonoBehaviour
             }
         }
     }
+
+    public void NextLevel()
+    {
+        int indexNextLvl = SceneManager.GetActiveScene().buildIndex + 1;
+        if (indexNextLvl > 11)
+        {
+            indexNextLvl = 2;
+        }
+        else
+        {
+            SceneManager.LoadScene(indexNextLvl);
+            //PlayerPrefs.SetInt("LevelsCompleted", indexNextLvl);
+        }
+
+    }
 }
