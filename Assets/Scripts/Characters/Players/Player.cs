@@ -3,19 +3,38 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    public GameObject UIplayer;
+    public GameObject UIPlayer;
     public GameObject WindowDeath;
+    GameObject t;
+    GameObject a;
 
     void Start()
     {
-        Instantiate(UIplayer, transform.position, transform.rotation);
+        t = (GameObject)Instantiate(UIPlayer, transform.position, transform.rotation);
+
     }
 
-    void Death()
+    public void Death()
     {
-        UIplayer.SetActive(false);
-        Instantiate(WindowDeath, transform.position, transform.rotation);
+        Destroy(t);
+        a = (GameObject)Instantiate(WindowDeath, transform.position, transform.rotation);
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("MovePlatform"))
+        {
+            this.transform.parent = collision.transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("MovePlatform"))
+        {
+            this.transform.parent = null;
+        }
     }
 
 }
