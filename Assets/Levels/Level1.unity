@@ -879,7 +879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3865295862574471768, guid: ebd86a1e91cefec49b6fe258e9f1db1d, type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3865295862574471770, guid: ebd86a1e91cefec49b6fe258e9f1db1d, type: 3}
       propertyPath: m_RootOrder
@@ -954,6 +954,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 365383706536841776, guid: 0af8b363d7658a643ba2a980a4ad898a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 365383706536841776, guid: 0af8b363d7658a643ba2a980a4ad898a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 365383706536841776, guid: 0af8b363d7658a643ba2a980a4ad898a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 365383706536841776, guid: 0af8b363d7658a643ba2a980a4ad898a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7018938077431728250, guid: 0af8b363d7658a643ba2a980a4ad898a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1006,7 +1022,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 0af8b363d7658a643ba2a980a4ad898a, type: 3}
 --- !u!50 &1754135346 stripped
 Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 7018938077431728253, guid: 0af8b363d7658a643ba2a980a4ad898a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 365383706536841779, guid: 0af8b363d7658a643ba2a980a4ad898a, type: 3}
   m_PrefabInstance: {fileID: 1754135345}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1898540102
@@ -1224,5 +1240,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

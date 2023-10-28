@@ -10,11 +10,16 @@ public class DuctTape : Player
     
     private Rigidbody2D _rigidbody2D;
     private DistanceJoint2D _distanceJoint2D;
+    private SpriteRenderer _targetSpriteRenderer;
         
     [Header("Settings")]
     [SerializeField] private float _maxDistanceInteraction = 15;
-    [SerializeField] private float _horizontalSpeed = 1;
+    [SerializeField] private float _horizontalSpeedAir = 1;
+    [SerializeField] private float _horizontalSpeedGround = 1;
     [SerializeField] private float _verticalSpeed = 1;
+
+    [SerializeField] private Color _targetCanFire;
+    private Color _canNotFire = new Color(0,0,0,0);
 
     private bool _isGlued = false;
     
@@ -22,6 +27,7 @@ public class DuctTape : Player
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _distanceJoint2D = GetComponent<DistanceJoint2D>();
+        _targetSpriteRenderer = RopePoint.GetComponent<SpriteRenderer>();
 
         _distanceJoint2D.enabled = false;
         LineRenderer.enabled = false;
@@ -34,11 +40,27 @@ public class DuctTape : Player
             if(!_isGlued) Fire();
             else Drop();
         }
-
+        
+        MoveRight(Input.GetAxis("Horizontal"));
+        
         if (_isGlued)
-        {
-            MoveRight(Input.GetAxis("Horizontal"));
             MoveUp(Input.GetAxis("Vertical"));
+        
+        else
+        {
+            Vector3 bindingPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, 
+                bindingPosition - transform.position, _maxDistanceInteraction, 
+                LayerMask.GetMask("Ground"));
+
+            if (hit.collider)
+            {
+                RopePoint.transform.position = hit.point;
+                _targetSpriteRenderer.color = _targetCanFire;
+            }
+            else
+                _targetSpriteRenderer.color = _canNotFire;
         }
         
         LineRenderer.SetPosition(0, transform.position);
@@ -53,7 +75,7 @@ public class DuctTape : Player
             bindingPosition - transform.position, _maxDistanceInteraction, 
             LayerMask.GetMask("Ground"));
 
-        if (hit.collider != null)
+        if (hit.collider)
         {
             _isGlued = true;
 
@@ -70,12 +92,15 @@ public class DuctTape : Player
     {
         LineRenderer.enabled = false;
         _distanceJoint2D.enabled = false;
+        _distanceJoint2D.distance = 0;
         _isGlued = false;
     }
 
     private void MoveRight(float direction)
     {
-        _rigidbody2D.AddForce(new Vector2(direction * _horizontalSpeed * Time.deltaTime, 0), ForceMode2D.Impulse);
+        float horizontalSpeed = _isGlued ? _horizontalSpeedAir : _horizontalSpeedGround;
+        
+        _rigidbody2D.AddForce(new Vector2(direction * horizontalSpeed * Time.deltaTime, 0), ForceMode2D.Impulse);
     }
     
     private void MoveUp(float direction)
