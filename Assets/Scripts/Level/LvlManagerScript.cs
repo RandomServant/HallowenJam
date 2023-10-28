@@ -9,6 +9,7 @@ public class LvlManagerScript : MonoBehaviour
 {
     int LastCompletedLvl ;
     public Button[] Levels;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,11 @@ public class LvlManagerScript : MonoBehaviour
     {
         SceneManager.LoadScene(indexLvl+1);
         //PlayerPrefs.SetInt("LevelsCompleted", indexLvl+1);
+    }
+
+    public void OpenLevelsManager()
+    {
+        SceneManager.LoadScene(1);
     }
 
     public void DeleteInfoLvl()
@@ -49,8 +55,8 @@ public class LvlManagerScript : MonoBehaviour
         else
         {
             SceneManager.LoadScene(indexNextLvl);
-            //PlayerPrefs.SetInt("LevelsCompleted", indexNextLvl);
         }
 
     }
+
 }
