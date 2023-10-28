@@ -5,20 +5,18 @@ public class Player : MonoBehaviour
 {
     public GameObject UIPlayer;
     public GameObject WindowDeath;
-    GameObject t;
-    GameObject a;
+    GameObject UI;
+    GameObject UIDeath;
 
     void Start()
     {
-        t = (GameObject)Instantiate(UIPlayer, transform.position, transform.rotation);
-
+        UI = (GameObject)Instantiate(UIPlayer, transform.position, transform.rotation);
     }
 
     public void Death()
     {
-        Destroy(t);
-        a = (GameObject)Instantiate(WindowDeath, transform.position, transform.rotation);
-
+        Destroy(UI);
+        UIDeath = (GameObject)Instantiate(WindowDeath, transform.position, transform.rotation);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -36,5 +34,4 @@ public class Player : MonoBehaviour
             this.transform.parent = null;
         }
     }
-
 }
