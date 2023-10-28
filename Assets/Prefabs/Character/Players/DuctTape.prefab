@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3865295862574471769}
   - component: {fileID: 3865295862574471768}
   - component: {fileID: 3865295862574471771}
+  - component: {fileID: 663322576814449052}
   m_Layer: 0
   m_Name: DuctTape
   m_TagString: Untagged
@@ -136,9 +137,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45340d49b980654ea602fcf3fba3242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FirePoint: {fileID: 0}
   LineRenderer: {fileID: 0}
   RopePoint: {fileID: 0}
   _maxDistanceInteraction: 5
   _horizontalSpeed: 1
   _verticalSpeed: 1
+--- !u!232 &663322576814449052
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3865295862574471764}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 0
+  m_Distance: 2.7956412
+  m_MaxDistanceOnly: 0
