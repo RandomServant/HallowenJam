@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovePlatform : MonoBehaviour
 {
-    float speed = 3f;
+    [SerializeField] private float speed = 3f;
 
     public bool dirX;
 
