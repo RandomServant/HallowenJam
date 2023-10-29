@@ -15,8 +15,8 @@ public class Tutorial : MonoBehaviour
     void Start()
     {
         _player.enabled = false;
+        ShowNextTutorialStage();
     }
-        
     
     void Update()
     {
