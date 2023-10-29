@@ -196,6 +196,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1941406541}
+    - target: {fileID: 1475438904762119474, guid: b555526905af66d42acbc47862d3ea1c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1475438904762119475, guid: b555526905af66d42acbc47862d3ea1c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -21170,6 +21174,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1941406541}
+    - target: {fileID: 4941317815970826195, guid: 837fb95b304264542a8468f9f1edc2d2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4941317815970826204, guid: 837fb95b304264542a8468f9f1edc2d2, type: 3}
       propertyPath: m_Name
       value: UIPlayer
@@ -21347,6 +21355,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1941406541}
+    - target: {fileID: 3432784553769733804, guid: a9a635d85fff78247b4bb10dd11b52c8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3432784553769733807, guid: a9a635d85fff78247b4bb10dd11b52c8, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -21952,6 +21964,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8067096196199070625, guid: 303fa68e6f7fd8d4c86dea92546a7c63, type: 3}
+      propertyPath: _nextLevelName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8067096196199070628, guid: 303fa68e6f7fd8d4c86dea92546a7c63, type: 3}
       propertyPath: m_RootOrder
       value: 2
