@@ -7,6 +7,9 @@ public class Toy : Player
 {
     private Rigidbody2D _rigidbody2D;
     private Animator _animator;
+
+    [SerializeField] private AudioSource _audioStart;
+    [SerializeField] private AudioSource _audioPlay;
     
     [Header("Settings")]
     [SerializeField] private float _speed;
@@ -41,15 +44,20 @@ public class Toy : Player
 
     private void UpdateClickTime()
     {
+        _audioStart.Play();
         _currentClickTime += _speedUpdateClickTime * Time.deltaTime;
-        
+
         if (_currentClickTime >= _maxClickTime)
+        {
             _currentClickTime = _maxClickTime;
+            _audioStart.Stop();
+        }
     }
 
     private void Move()
     {
         _animator.SetBool("Run", true);
+        _audioPlay.Play();
         
         _currentClickTime -= _speedUpdateClickTime * Time.deltaTime;
 
@@ -57,6 +65,7 @@ public class Toy : Player
         {
             _currentClickTime = 0;
             _animator.SetBool("Run", false);
+            _audioPlay.Stop();
             return;
         }
         
