@@ -6,6 +6,7 @@ using UnityEngine;
 public class MovePlatform : MonoBehaviour
 {
     [SerializeField] private float _speed = 3f;
+    [SerializeField] private float _stopSeconds;
 
     private bool _isMoveToFirst = true;
 
@@ -22,14 +23,20 @@ public class MovePlatform : MonoBehaviour
     private void Move()
     {
         if (Math.Abs(transform.position.x - _pointFirst.transform.position.x) < 0.001f)
-            _isMoveToFirst = false;
+            StartCoroutine(Stop(false));
         else if (Math.Abs(transform.position.x - _pointSecond.transform.position.x) < 0.001f)
-            _isMoveToFirst = true;
+            StartCoroutine(Stop(true));
         
         transform.position = Vector2.MoveTowards(
             transform.position, 
             (_isMoveToFirst ? _pointFirst.position : _pointSecond.position), 
             _speed * Time.deltaTime);
+    }
+
+    private IEnumerator Stop(bool change)
+    {
+        yield return new WaitForSeconds(_stopSeconds);
+        _isMoveToFirst = change;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
