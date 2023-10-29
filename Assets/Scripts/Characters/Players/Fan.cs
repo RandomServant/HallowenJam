@@ -8,6 +8,7 @@ public class Fan : Player
     public GameObject Head;
 
     private Rigidbody2D _rigidbody2D;
+    private Animator _animator;
 
     [Header("Settings")]
     [SerializeField] private float _maxDistanceInteraction = 5;
@@ -18,6 +19,7 @@ public class Fan : Player
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _animator = GetComponentInChildren<Animator>();
     }
     
     void Update()
@@ -26,6 +28,8 @@ public class Fan : Player
         
         if(Input.GetKey(KeyCode.Mouse0))
             PushMove();
+        else
+            _animator.SetFloat("Blend", 0);
 
         if (Input.GetButtonDown("1"))
             _currentLVL = 0;
@@ -51,6 +55,8 @@ public class Fan : Player
     {
         RaycastHit2D hit = Physics2D.Raycast(Head.transform.position, Head.transform.right, 
             _maxDistanceInteraction, LayerMask.GetMask("Ground"));
+        
+        _animator.SetFloat("Blend", ((float)_currentLVL + 1) / 3);
 
         if (hit.collider != null)
         {
