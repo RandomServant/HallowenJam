@@ -500,8 +500,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1651428180}
     - target: {fileID: 6180112717856407384, guid: 0b7ae29f4d1f9ad4ea2f667bd6c177f9, type: 3}
+      propertyPath: _maxDistanceInteraction
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180112717856407384, guid: 0b7ae29f4d1f9ad4ea2f667bd6c177f9, type: 3}
       propertyPath: _pushForceforEveryLVL.Array.data[0]
-      value: 0.05
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 6180112717856407384, guid: 0b7ae29f4d1f9ad4ea2f667bd6c177f9, type: 3}
       propertyPath: _pushForceforEveryLVL.Array.data[1]
@@ -509,7 +513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6180112717856407384, guid: 0b7ae29f4d1f9ad4ea2f667bd6c177f9, type: 3}
       propertyPath: _pushForceforEveryLVL.Array.data[2]
-      value: 0.15
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 6180112717856407389, guid: 0b7ae29f4d1f9ad4ea2f667bd6c177f9, type: 3}
       propertyPath: m_RootOrder
