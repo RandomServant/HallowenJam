@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     public GameObject WindowDeath;
 
     protected virtual void Start()
-    
+    {
         Time.timeScale = 1f;
         UIPlayer.SetActive(true);
         WindowDeath.SetActive(false);
