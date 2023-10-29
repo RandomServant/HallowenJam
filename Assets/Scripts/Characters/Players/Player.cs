@@ -6,8 +6,8 @@ public class Player : MonoBehaviour
     public GameObject UIPlayer;
     public GameObject WindowDeath;
 
-    void Start()
-    {
+    protected virtual void Start()
+    
         Time.timeScale = 1f;
         UIPlayer.SetActive(true);
         WindowDeath.SetActive(false);
@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("MovePlatform"))
         {
-            this.transform.parent = collision.transform;
+            transform.parent = collision.transform;
         }
     }
 
@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("MovePlatform"))
         {
-            this.transform.parent = null;
+            transform.parent = null;
         }
     }
 }

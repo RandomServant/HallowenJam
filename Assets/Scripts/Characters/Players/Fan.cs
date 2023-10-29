@@ -11,8 +11,10 @@ public class Fan : Player
 
     [Header("Settings")]
     [SerializeField] private float _maxDistanceInteraction = 5;
-    [SerializeField] private float _pushForce = 5;
-    
+    [SerializeField] private float[] _pushForceforEveryLVL = new float[]{ 1, 2, 3 };
+
+    private int _currentLVL = 0;
+
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -22,8 +24,15 @@ public class Fan : Player
     {
         HeadRotate();
         
-        if(Input.GetKeyDown(KeyCode.Mouse0))
+        if(Input.GetKey(KeyCode.Mouse0))
             PushMove();
+
+        if (Input.GetButtonDown("1"))
+            _currentLVL = 0;
+        if (Input.GetButtonDown("2"))
+            _currentLVL = 1;
+        if (Input.GetButtonDown("3"))
+            _currentLVL = 2;
     }
 
     private void HeadRotate()
@@ -46,7 +55,7 @@ public class Fan : Player
         if (hit.collider != null)
         {
             float distance = hit.distance;
-            float force = (_maxDistanceInteraction - distance) * _pushForce;
+            float force = (_maxDistanceInteraction - distance) * _pushForceforEveryLVL[_currentLVL];
             
             _rigidbody2D.AddForce(-Head.transform.right * force, ForceMode2D.Impulse);
         }
