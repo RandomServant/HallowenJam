@@ -43,7 +43,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 0.1
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -222,8 +222,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 1, g: 0, b: 0, a: 1}
-      maxColor: {r: 1, g: 0.5779932, b: 0, a: 1}
+      minColor: {r: 0.6392157, g: 0.1137255, b: 0.24313727, a: 1}
+      maxColor: {r: 1, g: 0.18431373, b: 0.20784315, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -608,7 +608,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -748,7 +748,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.5
+      value: 0.2
       mode: 0
       spread: 0
       speed:
@@ -1042,9 +1042,9 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.5
-          inSlope: -0.5
-          outSlope: -0.5
+          value: 0.2
+          inSlope: -0.2
+          outSlope: -0.2
           tangentMode: 34
           weightedMode: 0
           inWeight: 0
@@ -1052,8 +1052,8 @@ ParticleSystem:
         - serializedVersion: 3
           time: 1
           value: 0
-          inSlope: -0.5
-          outSlope: -0.5
+          inSlope: -0.2
+          outSlope: -0.2
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
