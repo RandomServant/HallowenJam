@@ -8,7 +8,7 @@ public class SandDeath : MonoBehaviour
 {
     [SerializeField] private float speed = 2f;
 
-    [SerializeField] private GameObject player;
+    private GameObject player;
 
 
     private bool isActive = false;
@@ -26,6 +26,7 @@ public class SandDeath : MonoBehaviour
         if (collision.gameObject.GetComponent<Player>())
         {
             isActive = true;
+            player = collision.gameObject;
             collision.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
 
         }
