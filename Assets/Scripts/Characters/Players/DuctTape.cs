@@ -24,6 +24,10 @@ public class DuctTape : Player
 
     [SerializeField] private Sprite[] _sprites;
 
+    [Header("Sounds")] 
+    [SerializeField] private AudioSource _audioActivate; 
+    [SerializeField] private AudioSource _audioDeactivate;
+
     private bool _isGlued = false;
     
     protected override void Start()
@@ -50,8 +54,9 @@ public class DuctTape : Player
         if (_isGlued)
         {
             MoveUp(Input.GetAxis("Vertical"));
+            int id = (int)Mathf.Ceil(3 * _distanceJoint2D.distance / _maxDistanceInteraction) - 1;
             _spriteRenderer.sprite = 
-                _sprites[(int)Mathf.Ceil(3 * _distanceJoint2D.distance / _maxDistanceInteraction) - 1];
+                _sprites[id >= 0 ? id : 0];
         }
         else
         {
@@ -86,6 +91,8 @@ public class DuctTape : Player
 
         if (hit.collider)
         {
+            _audioActivate.Play();
+            
             _isGlued = true;
 
             RopePoint.transform.position = hit.point;
@@ -99,6 +106,7 @@ public class DuctTape : Player
 
     private void Drop()
     {
+        _audioDeactivate.Play();
         LineRenderer.enabled = false;
         _distanceJoint2D.enabled = false;
         _distanceJoint2D.distance = 0;

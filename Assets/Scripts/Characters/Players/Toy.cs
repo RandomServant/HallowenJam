@@ -6,6 +6,7 @@ using UnityEngine;
 public class Toy : Player
 {
     private Rigidbody2D _rigidbody2D;
+    private Animator _animator;
     
     [Header("Settings")]
     [SerializeField] private float _speed;
@@ -14,11 +15,12 @@ public class Toy : Player
     [SerializeField] private float _jumpForce;
     
     private float _currentClickTime;
-    private float _direction;
-    
-    void Start()
+    private float _direction = 1;
+
+    protected override void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
     
     void Update()
@@ -47,12 +49,14 @@ public class Toy : Player
 
     private void Move()
     {
+        _animator.SetBool("Run", true);
         
         _currentClickTime -= _speedUpdateClickTime * Time.deltaTime;
 
         if (_currentClickTime <= 0)
         {
             _currentClickTime = 0;
+            _animator.SetBool("Run", false);
             return;
         }
         

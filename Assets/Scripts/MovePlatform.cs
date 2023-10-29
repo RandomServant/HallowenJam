@@ -1,73 +1,57 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MovePlatform : MonoBehaviour
 {
-    [SerializeField] private float speed = 3f;
+    [SerializeField] private float _speed = 3f;
+    [SerializeField] private float _stopSeconds;
 
-    public bool dirX;
+    private bool _isMoveToFirst = true;
 
-    bool moveinUp = true;
-    bool moveinRight = true;
+    [SerializeField] private Transform _pointFirst;
+    [SerializeField] private Transform _pointSecond;
 
-    [SerializeField] private GameObject PointLeft;
-    [SerializeField] private GameObject PoinRigth;
+    private Player player;
 
-    // Update is called once per frame
     void Update()
     {
-        if (dirX)
-        {
-            MoveDirX();
-        }
-        else
-        {
-            MoveDirY();
-        }
+        Move();
     }
 
-    void MoveDirX()
+    private void Move()
     {
-        if (transform.position.x > PoinRigth.transform.position.x)
-        {
-            moveinRight = false;
-        }
-        else if (transform.position.x < PointLeft.transform.position.x)
-        {
-            moveinRight = true;
-        }
-
-        if (moveinRight)
-        {
-            transform.position = new Vector2(transform.position.x + speed * Time.deltaTime, transform.position.y);
-        }
-        else
-        {
-            transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y);
-        }
+        if (Math.Abs(transform.position.x - _pointFirst.transform.position.x) < 0.001f)
+            StartCoroutine(Stop(false));
+        else if (Math.Abs(transform.position.x - _pointSecond.transform.position.x) < 0.001f)
+            StartCoroutine(Stop(true));
+        
+        transform.position = Vector2.MoveTowards(
+            transform.position, 
+            (_isMoveToFirst ? _pointFirst.position : _pointSecond.position), 
+            _speed * Time.deltaTime);
     }
 
-    void MoveDirY()
+    private IEnumerator Stop(bool change)
     {
-        if (transform.position.y > PoinRigth.transform.position.y)
-        {
-            moveinUp = false;
-        }
-        else if (transform.position.y < PointLeft.transform.position.y)
-        {
-            moveinUp = true;
-        }
-
-        if (moveinUp)
-        {
-            transform.position = new Vector2(transform.position.x, transform.position.y + speed * Time.deltaTime);
-        }
-        else
-        {
-            transform.position = new Vector2(transform.position.x, transform.position.y - speed * Time.deltaTime);
-        }
+        yield return new WaitForSeconds(_stopSeconds);
+        _isMoveToFirst = change;
     }
 
-
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        player = other.GetComponent<Player>();
+        if(player)
+            player.transform.SetParent(transform);
+    }
+    
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.GetComponent<Player>())
+        {
+            other.GetComponent<Player>().transform.SetParent(null);
+            player = null;
+        }
+    }
 }
