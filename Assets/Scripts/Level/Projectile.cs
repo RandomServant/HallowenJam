@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem _destoryEffect; 
+    [SerializeField] private ParticleSystem _destoryEffect;
+    [SerializeField] private AudioSource _destroyAudio;
     
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -17,6 +18,14 @@ public class Projectile : MonoBehaviour
         }
 
         Instantiate(_destoryEffect, transform.position, Quaternion.identity);
+        _destroyAudio.Play();
+        StartCoroutine(Destr());
+    }
+
+    private IEnumerator Destr()
+    {
+        GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(2);
         Destroy(gameObject);
     }
 }
