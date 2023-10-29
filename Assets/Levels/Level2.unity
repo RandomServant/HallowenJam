@@ -21966,7 +21966,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8067096196199070625, guid: 303fa68e6f7fd8d4c86dea92546a7c63, type: 3}
       propertyPath: _nextLevelName
-      value: 
+      value: Level3
       objectReference: {fileID: 0}
     - target: {fileID: 8067096196199070628, guid: 303fa68e6f7fd8d4c86dea92546a7c63, type: 3}
       propertyPath: m_RootOrder
