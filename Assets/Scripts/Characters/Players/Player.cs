@@ -5,18 +5,19 @@ public class Player : MonoBehaviour
 {
     public GameObject UIPlayer;
     public GameObject WindowDeath;
-    protected GameObject UI;
-    protected GameObject UIDeath;
 
     protected virtual void Start()
-    {
-        /*Instantiate(UIPlayer, transform.position, Quaternion.identity);*/
+    
+        Time.timeScale = 1f;
+        UIPlayer.SetActive(true);
+        WindowDeath.SetActive(false);
     }
 
     public void Death()
     {
-        Destroy(UI);
-        /*UIDeath = Instantiate(WindowDeath, transform.position, Quaternion.identity);*/
+        UIPlayer.SetActive(false);
+        WindowDeath.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

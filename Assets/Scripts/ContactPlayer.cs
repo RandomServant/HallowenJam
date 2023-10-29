@@ -13,7 +13,6 @@ public class ContactPlayer : MonoBehaviour
             if (other.gameObject.GetComponent<Player>())
             {
                 active = true;
-                Debug.Log("fgdhj");
                 other.gameObject.GetComponent<Player>().Death();
             }
         }
