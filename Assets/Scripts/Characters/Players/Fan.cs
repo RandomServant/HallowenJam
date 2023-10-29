@@ -19,6 +19,9 @@ public class Fan : Player
     [SerializeField] private float[] _pushForceforEveryLVL = new float[]{ 1, 2, 3 };
     [SerializeField] private float _baseParticleCount = 100;
 
+    [Header("Sounds")] 
+    [SerializeField] private AudioSource _audioSource;
+
     private int _currentLVL = 0;
 
     protected override void Start()
@@ -40,6 +43,8 @@ public class Fan : Player
             _animator.SetFloat("Blend", 0);
             var particleSystemEmission = _particleSystem.emission;
             particleSystemEmission.rateOverDistance = _baseParticleCount + _baseParticleCount * _currentLVL;
+            
+            _audioSource.volume = 0.1f;
         }
 
         if (Input.GetButtonDown("1"))
@@ -84,6 +89,8 @@ public class Fan : Player
         _animator.SetFloat("Blend", ((float)_currentLVL + 1) / 3);
         var particleSystemEmission = _particleSystem.emission;
         particleSystemEmission.rateOverDistance = _baseParticleCount + _baseParticleCount * _currentLVL;
+        
+        _audioSource.volume = 0.1f + (_currentLVL + 1) * 0.05f;
 
         if (hit.collider != null)
         {
