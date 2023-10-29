@@ -10,17 +10,14 @@ public class SandDeath : MonoBehaviour
 
     private GameObject player;
 
-
     private bool isActive = false;
     private bool isActiveSand = false;
 
-    // Update is called once per frame
     void Update()
     {
        MoveinSand();
     }
 
-    //OnTriggerEnter2D(Collider2D other)
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<Player>())
@@ -31,6 +28,7 @@ public class SandDeath : MonoBehaviour
 
         }
     }
+    
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<Player>())
@@ -39,11 +37,8 @@ public class SandDeath : MonoBehaviour
         }
     }
 
-
-
     void MoveinSand()
     {
-        
         if ( (transform.position.y != player.transform.position.y  || transform.position.x != player.transform.position.x) && isActive == true )
         {
             isActiveSand = true;
