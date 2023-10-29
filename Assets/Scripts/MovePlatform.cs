@@ -22,9 +22,9 @@ public class MovePlatform : MonoBehaviour
 
     private void Move()
     {
-        if (Math.Abs(transform.position.x - _pointFirst.transform.position.x) < 0.001f)
+        if (Math.Abs(transform.position.x - _pointFirst.transform.position.x) < 0.1f)
             StartCoroutine(Stop(false));
-        else if (Math.Abs(transform.position.x - _pointSecond.transform.position.x) < 0.001f)
+        else if (Math.Abs(transform.position.x - _pointSecond.transform.position.x) < 0.1f)
             StartCoroutine(Stop(true));
         
         transform.position = Vector2.MoveTowards(
