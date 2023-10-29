@@ -10,7 +10,6 @@ public class RestartLvl : MonoBehaviour
     {
         int indexCurrentLvl = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(indexCurrentLvl);
-        Destroy(WindowDeath);
         Time.timeScale = 1f;
     }
 }

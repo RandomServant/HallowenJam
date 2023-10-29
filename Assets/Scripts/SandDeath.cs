@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+
 public class SandDeath : MonoBehaviour
 {
     [SerializeField] private float speed = 2f;
@@ -24,8 +25,9 @@ public class SandDeath : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Player>())
         {
-           isActive = true;
-           Debug.Log("activate");
+            isActive = true;
+            collision.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -33,7 +35,6 @@ public class SandDeath : MonoBehaviour
         if (collision.gameObject.GetComponent<Player>())
         {
             isActive = false;
-            Debug.Log("Not");
         }
     }
 
@@ -41,6 +42,7 @@ public class SandDeath : MonoBehaviour
 
     void MoveinSand()
     {
+        
         if ( (transform.position.y != player.transform.position.y  || transform.position.x != player.transform.position.x) && isActive == true )
         {
             isActiveSand = true;
@@ -48,13 +50,14 @@ public class SandDeath : MonoBehaviour
         if ( (transform.position.y == player.transform.position.y || transform.position.x == player.transform.position.x) && isActive == true)
         {
             isActiveSand = false;
-            Debug.Log("death");
             player.GetComponent<Player>().Death();
         }
-
+        if (!isActive)
+        {
+            isActiveSand = false;
+        }
         if (isActiveSand)
         {
-            Debug.Log("move");
             player.transform.position = Vector2.MoveTowards(player.transform.position, transform.position, speed * Time.deltaTime);
         }
     }
