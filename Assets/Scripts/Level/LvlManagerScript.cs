@@ -18,13 +18,18 @@ public class LvlManagerScript : MonoBehaviour
 
     public void  PlayLevel(int indexLvl)
     {
-        SceneManager.LoadScene(indexLvl+1);
+        SceneManager.LoadScene(indexLvl+2);
         //PlayerPrefs.SetInt("LevelsCompleted", indexLvl+1);
     }
 
     public void OpenLevelsManager()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("LvlManager");
+    }
+
+    public void OpenMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void DeleteInfoLvl()

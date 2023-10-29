@@ -27,9 +27,7 @@ public class MainMenuButtons : MonoBehaviour
 
    public void Play()
     {
-        SceneManager.LoadScene(1);
-        //PlayerPrefs.SetInt("LevelsCompleted", 1);
-
+        SceneManager.LoadScene("LvlManager");
     }
 
 
