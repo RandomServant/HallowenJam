@@ -410,6 +410,34 @@ PrefabInstance:
       propertyPath: m_Text
       value: AGAIN
       objectReference: {fileID: 0}
+    - target: {fileID: 4439366160160033010, guid: 2f706b3f822ec394d89de58c898ba29f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439366160160033010, guid: 2f706b3f822ec394d89de58c898ba29f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439366160160033010, guid: 2f706b3f822ec394d89de58c898ba29f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4534077038209418734}
+    - target: {fileID: 4439366160160033010, guid: 2f706b3f822ec394d89de58c898ba29f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439366160160033010, guid: 2f706b3f822ec394d89de58c898ba29f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439366160160033010, guid: 2f706b3f822ec394d89de58c898ba29f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RestartLvl, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439366160160033010, guid: 2f706b3f822ec394d89de58c898ba29f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4911021064588706626, guid: 2f706b3f822ec394d89de58c898ba29f, type: 3}
       propertyPath: m_Name
       value: RestartButton
@@ -509,3 +537,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7140022735106240979, guid: 2f706b3f822ec394d89de58c898ba29f, type: 3}
   m_PrefabInstance: {fileID: 7637736978670595429}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4534077038209418734 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6274348105395398795, guid: 2f706b3f822ec394d89de58c898ba29f, type: 3}
+  m_PrefabInstance: {fileID: 7637736978670595429}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c105ed67be187c49a21f25867ed77da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
