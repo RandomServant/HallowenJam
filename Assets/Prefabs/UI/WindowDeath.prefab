@@ -410,6 +410,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RestartButton
       objectReference: {fileID: 0}
+    - target: {fileID: 6274348105395398795, guid: 2f706b3f822ec394d89de58c898ba29f, type: 3}
+      propertyPath: WindowDeath
+      value: 
+      objectReference: {fileID: 1475438904762119487}
     - target: {fileID: 7140022735106240979, guid: 2f706b3f822ec394d89de58c898ba29f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

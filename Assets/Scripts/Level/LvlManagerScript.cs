@@ -19,7 +19,7 @@ public class LvlManagerScript : MonoBehaviour
     public void  PlayLevel(int indexLvl)
     {
         SceneManager.LoadScene(indexLvl+2);
-        //PlayerPrefs.SetInt("LevelsCompleted", indexLvl+1);
+        Time.timeScale = 1f;
     }
 
     public void OpenLevelsManager()
