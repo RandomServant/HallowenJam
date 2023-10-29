@@ -25,7 +25,6 @@ public class SandDeath : MonoBehaviour
             isActive = true;
             player = collision.gameObject;
             collision.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-
         }
     }
     
