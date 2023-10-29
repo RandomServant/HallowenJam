@@ -5,9 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Levels/StartCartoon.unity
+    guid: 9c377344c5d91ca489818272c29acabb
   - enabled: 1
     path: Assets/Levels/MainMenu.unity
     guid: a06ad76ef80ca3941818ac898e91b0ea
@@ -20,7 +20,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Level2.unity
     guid: a11967b193a551a408675009dadc4031
-  - enabled: 1
-    path: Assets/Levels/WindowDeath.unity
-    guid: fad6c6ef3dbf2f34b988ea42ddd784b6
   m_configObjects: {}
