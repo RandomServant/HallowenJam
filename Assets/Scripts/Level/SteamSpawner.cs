@@ -7,6 +7,8 @@ public class SteamSpawner : MonoBehaviour
     [SerializeField] private ParticleSystem _particleSystem;
 
     [SerializeField] private float _startEverySecond = 1;
+
+    [SerializeField] private AudioSource _audioSource;
     
     void Start()
     {
@@ -19,6 +21,7 @@ public class SteamSpawner : MonoBehaviour
         {
             yield return new WaitForSeconds(_startEverySecond);
             _particleSystem.Play();
+            _audioSource.Play();
         }
     }
 }
