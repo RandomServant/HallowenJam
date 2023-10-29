@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destructibleForce: 1
+  _destroyEffect: {fileID: 5688087422987046684, guid: 8d5d99997843926498513d6ab594e61f, type: 3}
   DestroyPlatformEvent:
     m_PersistentCalls:
       m_Calls:
