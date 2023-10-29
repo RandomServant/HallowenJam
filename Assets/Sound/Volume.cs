@@ -10,7 +10,6 @@ public class Volume : MonoBehaviour
     {
         audioSrc = GetComponent<AudioSource>();
         audioSrc.volume = PlayerPrefs.GetFloat("Volume");
-        PlayerPrefs.SetFloat("Volume", audioSrc.volume);
     }
 
     void Update()
