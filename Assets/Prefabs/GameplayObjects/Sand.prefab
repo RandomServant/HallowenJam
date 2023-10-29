@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5936822047809260283}
   - component: {fileID: 5936822047809260286}
   m_Layer: 0
-  m_Name: SandDeath
+  m_Name: Sand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
