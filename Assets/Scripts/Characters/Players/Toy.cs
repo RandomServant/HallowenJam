@@ -15,7 +15,7 @@ public class Toy : Player
     [SerializeField] private float _jumpForce;
     
     private float _currentClickTime;
-    private float _direction;
+    private float _direction = 1;
 
     protected override void Start()
     {
