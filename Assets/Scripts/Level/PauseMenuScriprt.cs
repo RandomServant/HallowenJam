@@ -11,11 +11,13 @@ public class PauseMenuScriprt : MonoBehaviour
     {
         IsActivePause = false;
         UIPauseMenu.SetActive(false);
+        Time.timeScale = 1f;
     }
     void OpenPauseMenu()
     {
         IsActivePause = true;
         UIPauseMenu.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     void Update()

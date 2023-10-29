@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         UI = (GameObject)Instantiate(UIPlayer, transform.position, transform.rotation);
     }
 
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
     {
         Destroy(UI);
         UIDeath = (GameObject)Instantiate(WindowDeath, transform.position, transform.rotation);
+        Time.timeScale = 0f;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
