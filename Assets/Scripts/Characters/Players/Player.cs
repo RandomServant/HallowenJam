@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        _audioSourceGroundHit.volume = other.relativeVelocity.magnitude / _forceHitForAudio;
+        _audioSourceGroundHit.volume = (other.relativeVelocity.magnitude / _forceHitForAudio) / 2;
         _audioSourceGroundHit.Play();
     }
 }
