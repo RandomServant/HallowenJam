@@ -50,8 +50,9 @@ public class DuctTape : Player
         if (_isGlued)
         {
             MoveUp(Input.GetAxis("Vertical"));
+            int id = (int)Mathf.Ceil(3 * _distanceJoint2D.distance / _maxDistanceInteraction) - 1;
             _spriteRenderer.sprite = 
-                _sprites[(int)Mathf.Ceil(3 * _distanceJoint2D.distance / _maxDistanceInteraction) - 1];
+                _sprites[id >= 0 ? id : 0];
         }
         else
         {
