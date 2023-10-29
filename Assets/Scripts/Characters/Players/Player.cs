@@ -5,19 +5,18 @@ public class Player : MonoBehaviour
 {
     public GameObject UIPlayer;
     public GameObject WindowDeath;
-    GameObject UI;
-    GameObject UIDeath;
 
     void Start()
     {
         Time.timeScale = 1f;
-        UI = (GameObject)Instantiate(UIPlayer, transform.position, transform.rotation);
+        UIPlayer.SetActive(true);
+        WindowDeath.SetActive(false);
     }
 
     public void Death()
     {
-        Destroy(UI);
-        UIDeath = (GameObject)Instantiate(WindowDeath, transform.position, transform.rotation);
+        UIPlayer.SetActive(false);
+        WindowDeath.SetActive(true);
         Time.timeScale = 0f;
     }
 
