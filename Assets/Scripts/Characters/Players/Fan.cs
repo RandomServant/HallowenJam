@@ -100,5 +100,12 @@ public class Fan : Player
             _rigidbody2D.AddForce(-Head.transform.right * (_spriteRenderer.flipX ? -1 : 1) * force, 
                 ForceMode2D.Impulse);
         }
+        else
+        {
+            float force = _pushForceforEveryLVL[_currentLVL] * 0.5f;
+            
+            _rigidbody2D.AddForce(-Head.transform.right * (_spriteRenderer.flipX ? -1 : 1) * force, 
+                ForceMode2D.Impulse);
+        }
     }
 }
