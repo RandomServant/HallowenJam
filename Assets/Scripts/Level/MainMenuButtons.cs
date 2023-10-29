@@ -25,11 +25,14 @@ public class MainMenuButtons : MonoBehaviour
         }
     }
 
-   public void Play()
+    public void Play()
     {
         SceneManager.LoadScene("LvlManager");
+        if (PlayerPrefs.GetInt("LevelsCompleted") == 0)
+        {
+            PlayerPrefs.SetInt("LevelsCompleted", 1);
+        }
     }
-
 
    public void Exit()
     {
