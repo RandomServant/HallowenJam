@@ -12006,6 +12006,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8067096196199070625, guid: 303fa68e6f7fd8d4c86dea92546a7c63, type: 3}
+      propertyPath: _nextLevelName
+      value: Level2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8067096196199070625, guid: 303fa68e6f7fd8d4c86dea92546a7c63, type: 3}
       propertyPath: EnterFinish.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
