@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Levels/StartCartoon.unity
+    path: Assets/Scenes/StartCartoon.unity
     guid: 9c377344c5d91ca489818272c29acabb
   - enabled: 1
-    path: Assets/Levels/MainMenu.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: a06ad76ef80ca3941818ac898e91b0ea
   - enabled: 1
-    path: Assets/Levels/LvlManager.unity
+    path: Assets/Scenes/LvlManager.unity
     guid: b7966730e3d62e34fa98b5bb8c1ae762
   - enabled: 1
     path: Assets/Levels/Level1.unity

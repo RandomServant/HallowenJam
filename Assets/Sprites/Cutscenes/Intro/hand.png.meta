@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 24cb71162b015cf4db6ed1dad766e372
+guid: 745d83128e02b49478006236e2a229e7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -153,13 +153,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wheel_of_fortune_0
+      name: hand_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2
-        width: 113
-        height: 112
+        y: 74
+        width: 39
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a7b682c18e623d43a3b0885047916c6
-      internalID: 892005662
+      spriteID: 200bb3955bd3ccd4991aa37c48a9d481
+      internalID: 1065340214
       vertices: []
       indices: 
       edges: []
@@ -184,7 +184,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      wheel_of_fortune_0: 892005662
+      hand_0: 1065340214
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

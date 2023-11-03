@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 93b24b3e8a1b6ec4db467388ddc3e48f
+guid: ac35ab27cdfd0e9469649fbaea7bf4ca
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -153,7 +153,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 4_frame_0
+      name: 1_frame_0
       rect:
         serializedVersion: 2
         x: 0
@@ -167,14 +167,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f51bfd6aa84812c4bb820f7196a5f1b7
-      internalID: -304384433
+      spriteID: 09075584707cc6f4ca9e56c5b4846cff
+      internalID: -1660337840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_frame_1
+      name: 1_frame_1
       rect:
         serializedVersion: 2
         x: 167
@@ -188,14 +188,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 834660d4452fbfe4d86d18a1b8dd3d54
-      internalID: 1418339926
+      spriteID: 8e7b605890879eb4e99d078fa16af94c
+      internalID: -2001384147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_frame_2
+      name: 1_frame_2
       rect:
         serializedVersion: 2
         x: 334
@@ -209,14 +209,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd2bafb3e29f61640b63cb6a81aecea3
-      internalID: 1237913421
+      spriteID: 03d56715386e9ff47994db91d5263edc
+      internalID: 1055068445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 4_frame_3
+      name: 1_frame_3
       rect:
         serializedVersion: 2
         x: 501
@@ -230,50 +230,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 369e9518825b29b4ab47d4f4199dd44c
-      internalID: 628767508
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 4_frame_4
-      rect:
-        serializedVersion: 2
-        x: 668
-        y: 0
-        width: 166
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8819783ac7d9f4c46b282f4b6773f953
-      internalID: 1724244476
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 4_frame_5
-      rect:
-        serializedVersion: 2
-        x: 835
-        y: 0
-        width: 166
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f1a0d82ae0554d4a97b4a6e8e942b51
-      internalID: 71557888
+      spriteID: 2d2ca4f5dd17d08458cb928f4c7060a6
+      internalID: 138827890
       vertices: []
       indices: 
       edges: []
@@ -289,12 +247,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      4_frame_2: 1237913421
-      4_frame_0: -304384433
-      4_frame_1: 1418339926
-      4_frame_4: 1724244476
-      4_frame_5: 71557888
-      4_frame_3: 628767508
+      1_frame_3: 138827890
+      1_frame_0: -1660337840
+      1_frame_1: -2001384147
+      1_frame_2: 1055068445
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

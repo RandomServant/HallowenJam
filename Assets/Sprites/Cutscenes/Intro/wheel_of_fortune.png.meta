@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b2a8917efd7b23644bbffb1966921d32
+guid: 24cb71162b015cf4db6ed1dad766e372
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -153,13 +153,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cloud_0
+      name: wheel_of_fortune_0
       rect:
         serializedVersion: 2
         x: 0
         y: 2
-        width: 86
-        height: 45
+        width: 113
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,29 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38530c8c298bbb848bb51fbd1d302463
-      internalID: 851540772
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cloud_1
-      rect:
-        serializedVersion: 2
-        x: 92
-        y: 2
-        width: 86
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 251decd23669ec54aaffe9eb35aaca29
-      internalID: 883964096
+      spriteID: 8a7b682c18e623d43a3b0885047916c6
+      internalID: 892005662
       vertices: []
       indices: 
       edges: []
@@ -205,8 +184,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      cloud_0: 851540772
-      cloud_1: 883964096
+      wheel_of_fortune_0: 892005662
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
