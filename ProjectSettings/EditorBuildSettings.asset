@@ -9,15 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: a06ad76ef80ca3941818ac898e91b0ea
   - enabled: 1
-    path: Assets/Scenes/Chapter Select.unity
+    path: Assets/Scenes/Chapters/Chapter Select.unity
     guid: 3e2b6c61106cd9b40b1b607fd61add90
   - enabled: 1
-    path: Assets/Scenes/Chapters/Level Select Scotch.unity
+    path: Assets/Scenes/Chapters/Levels/Level Select Scotch.unity
     guid: 30330f8aafaf5cd4b91a7e6ede7d0f8d
   - enabled: 1
-    path: Assets/Scenes/Chapters/Scoth/Scotch Level 1.unity
+    path: Assets/Scenes/Chapters/Levels/Scoth/Scotch Level 1.unity
     guid: 63117ab2ebd7eb046bc7bf67e97c6d96
   - enabled: 1
-    path: Assets/Scenes/Chapters/Scoth/Scotch Level 2.unity
+    path: Assets/Scenes/Chapters/Levels/Scoth/Scotch Level 2.unity
     guid: a11967b193a551a408675009dadc4031
   m_configObjects: {}

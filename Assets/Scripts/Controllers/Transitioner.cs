@@ -11,7 +11,7 @@ public class Transitioner : MonoBehaviour
     [SerializeField] Controller controller;
     public void TransitionAnimation()
     {
-        anim.SetTrigger("closingDoor");
+        anim.SetTrigger("OpenCloseDoor");
     }
 
     public void ControllerEvent()
