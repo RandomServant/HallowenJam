@@ -6,18 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/StartCartoon.unity
-    guid: 9c377344c5d91ca489818272c29acabb
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Main Menu.unity
     guid: a06ad76ef80ca3941818ac898e91b0ea
   - enabled: 1
-    path: Assets/Scenes/LvlManager.unity
-    guid: b7966730e3d62e34fa98b5bb8c1ae762
+    path: Assets/Scenes/Chapter Select.unity
+    guid: 3e2b6c61106cd9b40b1b607fd61add90
   - enabled: 1
-    path: Assets/Levels/Level1.unity
-    guid: d55c4b4c79162b9449bee66a329559ce
+    path: Assets/Scenes/Chapters/Level Select Scotch.unity
+    guid: 30330f8aafaf5cd4b91a7e6ede7d0f8d
   - enabled: 1
-    path: Assets/Levels/Level2.unity
+    path: Assets/Scenes/Chapters/Scoth/Scotch Level 1.unity
+    guid: 63117ab2ebd7eb046bc7bf67e97c6d96
+  - enabled: 1
+    path: Assets/Scenes/Chapters/Scoth/Scotch Level 2.unity
     guid: a11967b193a551a408675009dadc4031
   m_configObjects: {}

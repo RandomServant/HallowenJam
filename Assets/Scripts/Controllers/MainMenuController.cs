@@ -2,12 +2,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class MainMenuController : MonoBehaviour
+public class MainMenuController : Controller
 {
     [Header("Buttons")]
     [SerializeField] private Button playBtn;
     private Text playBtnText;
-    void Start()
+    override protected void Start()
     {
         playBtnText = playBtn.gameObject.GetComponentInChildren<Text>();
 
@@ -18,7 +18,7 @@ public class MainMenuController : MonoBehaviour
     }
     public void Play()
     {
-        SceneManager.LoadScene("LvlManager");
+        SceneManager.LoadScene("Chapter Select");
 
         if (PlayerPrefs.GetInt("LevelsCompleted") == 0)
             PlayerPrefs.SetInt("LevelsCompleted", 1);
