@@ -8,10 +8,8 @@ public class Ghost : MonoBehaviour
     private Vector3 direction;
 
     [SerializeField] private float speed;
-    void Start()
-    {
-        
-    }
+
+    private bool isFacingRight = true;
 
     void Update()
     {
@@ -20,7 +18,19 @@ public class Ghost : MonoBehaviour
 
         direction = new Vector3(horizontal, vertical, 0);
 
+        Flip();
         Move();
+    }
+
+    private void Flip()
+    {
+        if ( isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
     }
 
     private void Move()

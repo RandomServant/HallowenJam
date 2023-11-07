@@ -18,7 +18,8 @@ public class MainMenuController : Controller
     }
     public void Play()
     {
-        SceneManager.LoadScene("Chapter Select");
+        //SceneManager.LoadScene("Chapter Select");
+        SceneManager.LoadScene("Introductory Cutscene");
 
         if (PlayerPrefs.GetInt("LevelsCompleted") == 0)
             PlayerPrefs.SetInt("LevelsCompleted", 1);

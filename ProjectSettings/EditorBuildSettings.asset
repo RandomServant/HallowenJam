@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chapters/Levels/Scoth/Scotch Level 2.unity
     guid: a11967b193a551a408675009dadc4031
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes/Introductory Cutscene.unity
+    guid: 9c377344c5d91ca489818272c29acabb
   m_configObjects: {}
